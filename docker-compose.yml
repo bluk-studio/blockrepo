@@ -6,11 +6,15 @@ services:
       - users
     ports:
     - 9090
+    volumes:
+    - ./services/api-gateway:/src
     restart: always
 
   # 
   users:
     build: services/users
+    volumes:
+    - ./services/users:/src
     ports:
       - 5000
 
