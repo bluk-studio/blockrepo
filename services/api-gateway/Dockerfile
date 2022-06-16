@@ -11,4 +11,6 @@ COPY . .
 
 RUN go build -o /grpc_proxy
 
+EXPOSE 9090
+
 CMD ["/grpc_proxy"]
