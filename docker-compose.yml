@@ -6,7 +6,7 @@ services:
     depends_on:
       - users
     ports:
-    - 9090
+    - 9090:9090
     volumes:
     - ./services/api-gateway:/src
     restart: always
