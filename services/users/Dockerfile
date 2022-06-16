@@ -6,17 +6,13 @@ WORKDIR /src
 COPY . .
 
 RUN npm install
-RUN ls
 WORKDIR /src/services/users
-RUN ls
-RUN npm install
 RUN npm run build
-RUN ls
 
 # Runtime
 FROM node:16-alpine as runtime
 
-COPY --from=build ./node_modules .
-COPY --from=build ./dist .
+COPY --from=build ./src/node_modules .
+COPY --from=build ./src/dist .
 
 CMD ["node", "main.js"]
