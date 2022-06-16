@@ -1,6 +1,0 @@
-syntax = "proto3";
-
-message ClusterHealth {
-  int32 usedMemory = 1;
-  bool isReady = 2;
-};

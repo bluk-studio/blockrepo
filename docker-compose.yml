@@ -18,7 +18,7 @@ services:
       dockerfile: ./services/users/Development.dockerfile
     volumes:
     - ./:/src
-    # command: ls && cd ~/src/services/users && npm run start:dev
+    command: npm run start:dev
     ports:
       - 5000
 

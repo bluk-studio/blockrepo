@@ -1,6 +1,0 @@
-syntax = "proto3";
-
-// Create method
-message CreateRequest {
-  string name = 1;
-}

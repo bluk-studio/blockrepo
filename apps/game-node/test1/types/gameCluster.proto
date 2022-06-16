@@ -1,5 +1,0 @@
-syntax = "proto3";
-
-message GameCluster {
-  string url = 1;
-};
