@@ -15,7 +15,7 @@ services:
   users:
     build:
       context: .
-      dockerfile: ./services/users/Dockerfile
+      dockerfile: ./services/users/Development.dockerfile
     volumes:
     - ./services/users:/src
     ports:
