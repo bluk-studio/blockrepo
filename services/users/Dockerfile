@@ -3,11 +3,12 @@ FROM node:16-alpine as build
 
 WORKDIR /src
 
-COPY package.json .
-COPY package-lock.json .
+COPY . .
 
+RUN ls
 RUN npm ci
 RUN npm run build
+RUN ls
 
 # Runtime
 FROM node:16-alpine as runtime
