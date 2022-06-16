@@ -8,7 +8,7 @@ COPY . .
 RUN ls
 WORKDIR /src/services/users
 RUN ls
-RUN npm ci
+RUN npm install
 RUN npm run build
 RUN ls
 
