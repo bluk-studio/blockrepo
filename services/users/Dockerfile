@@ -13,6 +13,6 @@ RUN npm run build
 FROM node:16-alpine as runtime
 
 COPY --from=build ./src/node_modules .
-COPY --from=build ./src/dist .
+COPY --from=build ./src/services/users/dist .
 
 CMD ["node", "main.js"]
