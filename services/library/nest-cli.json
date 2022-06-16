@@ -5,7 +5,7 @@
     "webpack": true,
     "assets": [
       {
-        "include": "../../../shared/src/proto",
+        "include": "../../../packages/shared/src/proto",
         "outDir": "dist/proto"
       }
     ],
