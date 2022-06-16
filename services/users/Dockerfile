@@ -5,6 +5,7 @@ WORKDIR /src
 
 COPY . .
 
+RUN npm install
 RUN ls
 WORKDIR /src/services/users
 RUN ls
