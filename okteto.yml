@@ -11,7 +11,7 @@ build:
   #  - OKTETO_BUILD_API-GATEWAY_TAG: image tag
   api-gateway:
     context: services\api-gateway
-    dockerfile: services\api-gateway\Dockerfile
+    dockerfile: Dockerfile
 
   # You can use the following env vars to refer to this image in your deploy commands:
   #  - OKTETO_BUILD_USERS_REGISTRY: image registry
@@ -20,7 +20,7 @@ build:
   #  - OKTETO_BUILD_USERS_TAG: image tag
   users:
     context: services\users
-    dockerfile: services\users\Dockerfile
+    dockerfile: Dockerfile
 
 # The deploy section defines how to deploy your development environment
 # More info: https://www.okteto.com/docs/reference/manifest/#deploy
