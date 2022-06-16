@@ -1,0 +1,3 @@
+endpoints:
+  - dial: "library:5000"
+  - dial: "users:5000"

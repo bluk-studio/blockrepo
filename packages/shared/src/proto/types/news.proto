@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package bluk.games;
+
+message NewsPost {
+  string id = 1;
+  string thumbnail = 2;
+  string title = 3;
+  string description = 4;
+  string content = 5;
+};

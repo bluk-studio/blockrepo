@@ -1,0 +1,14 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "webpack": true,
+    "assets": [
+      {
+        "include": "../../../shared/src/proto",
+        "outDir": "dist/proto"
+      }
+    ],
+    "watchAssets": true
+  }
+}

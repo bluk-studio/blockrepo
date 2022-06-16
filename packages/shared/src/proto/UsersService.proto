@@ -1,0 +1,60 @@
+// syntax = "proto3";
+
+// package bluk.games;
+
+// import "types/user.proto";
+
+// service SampleService {
+//   rpc GetMessage(EmptyRequest) returns (User) {}
+// };
+
+// message EmptyRequest {};
+
+syntax = "proto3";
+
+package bluk.games;
+
+// Imports
+import "types/user.proto";
+import "types/token.proto";
+import "types/miscellaneous.proto";
+import "types/permissions.proto";
+import "types/metadata/UsersService.proto";
+
+// Services
+service UserService {
+  rpc FindOne (FindOneUserRequest) returns (User) {}
+  rpc FetchMe (FetchMeRequest) returns (FetchMeResponse) {}
+
+  // Auth-token related (for authorization inside minecraft)
+  rpc CreateAuthToken (EmptyRequest) returns (AuthToken) {}
+  rpc WatchAuthToken (WatchAuthTokenRequest) returns (stream AuthToken) {}
+  rpc AuthorizeAuthToken (AuthorizeAuthTokenRequest) returns (AuthToken) {}
+};
+
+service TokenService {
+  rpc GenerateToken (GenerateTokenRequest) returns (Token) {}
+  rpc FetchToken (FetchTokenRequest) returns (Token) {}
+}
+
+// Requests/Responses
+message FindOneUserRequest {
+  string id = 1;
+}
+
+message FetchMeRequest {}
+
+message FetchMeResponse {
+  User user = 1;
+  Token token = 2;
+}
+
+message GenerateTokenRequest {
+  TokenType type = 1;
+  string entityId = 2;
+  repeated Permission permissions = 3;
+};
+
+message FetchTokenRequest {
+  string id = 1;
+};

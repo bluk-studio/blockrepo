@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+import "types/user.proto";
+
+// @type Game
+message Game {
+  string id = 1;
+  string name = 2;
+  optional string icon = 3;
+  optional string thumbnail = 4;
+  optional User creator = 5;
+  repeated string tags = 6;
+  LandingPageConfig landingPageConfig = 7;
+
+  message LandingPageConfig {
+    // Header links
+    message HeaderLink {
+      string text = 1;
+      string href = 2;
+    }
+
+    repeated HeaderLink headerLinks = 1;
+
+    // Description
+    string description = 2;
+  }
+}

@@ -1,0 +1,25 @@
+services:
+  # 
+  api-gateway:
+    build:
+      context: "./services/api-gateway"
+      dockerfile: Dockerfile
+    depends_on:
+      - users
+    ports:
+    - 9090
+    restart: always
+
+  # 
+  users:
+    build:
+      context: "./services/users"
+      dockerfile: Dockerfile
+    ports:
+      - 5000
+
+  # 
+  # library:
+
+volumes:
+  data:

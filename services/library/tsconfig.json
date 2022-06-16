@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@shared": ["../../packages/shared/src"],
+      "@shared/*": ["../../packages/shared/src/*"],
+
+      "@proto/*": ["../../packages/shared/src/interfaces/proto/*"],
+
+      // Shared Nest-related module 
+      "@guards": ["../../packages/shared/src/guards"],
+      "@guards/*": ["../../packages/shared/src/guards/*"],
+
+      "@decorators": ["../../packages/shared/src/decorators"],
+      "@decorators/*": ["../../packages/shared/src/decorators/*"],
+    }
+  },
+  "references": [
+    {
+      "path": "../../packages/shared"
+    }
+  ]
+}

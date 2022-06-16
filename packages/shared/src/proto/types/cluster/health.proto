@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package bluk.games;
+
+message ClusterHealth {
+  int32 usedMemory = 1;
+  bool isReady = 2;
+};

@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package bluk.games;
+
+// Imports
+import "types/permissions.proto";
+
+// TokenType enum
+enum TokenType {
+  USER = 0;
+  ROBOT = 1;
+}
+
+// Token message
+message Token {
+  string id = 1;
+  TokenType type = 2;
+  string entityId = 3;
+  repeated Permission permissions = 4;
+}
+
+// AuthToken
+message AuthToken {
+  string id = 1;
+  string uid = 2;
+  bool isAuthorized = 3;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package bluk.games;
+
+message AuthorizeAuthTokenRequest {
+  string id = 1;
+};
+
+message WatchAuthTokenRequest {
+  string id = 1;
+};

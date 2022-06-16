@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+import "types/gameCluster.proto";
+import "types/cluster/server.proto";
+
+// ClustersService related
+message GetAllResponse {
+  repeated GameCluster clusters = 1;
+};
+
+// OneClusterService related
+message GetAllServersResponse {
+  repeated Server servers = 1;
+};
+
+message CreateServerRequest {
+  string image = 1;
+};
+
+message SendServerHealthRequest {
+  string id = 1;
+  ServerHealth health = 2;
+}

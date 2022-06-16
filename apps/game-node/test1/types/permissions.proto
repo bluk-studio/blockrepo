@@ -1,0 +1,5 @@
+syntax = "proto3";
+
+enum Permission {
+  CREATE_TOKEN = 0;
+}

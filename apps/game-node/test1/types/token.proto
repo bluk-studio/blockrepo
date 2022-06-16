@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+// Imports
+import "types/permissions.proto";
+
+// TokenType enum
+enum TokenType {
+  USER = 0;
+  ROBOT = 1;
+}
+
+// Token message
+message Token {
+  string id = 1;
+  TokenType type = 2;
+  string entityId = 3;
+  repeated Permission permissions = 4;
+}

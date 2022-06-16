@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package bluk.games;
+
+enum Permission {
+  CREATE_TOKEN = 0;
+}

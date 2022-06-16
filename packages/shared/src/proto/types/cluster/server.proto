@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package bluk.games;
+
+// Imports
+import "types/user.proto";
+
+message Server {
+  string id = 1;
+  string image = 2;
+  int32 port = 3;
+  ServerHealth health = 4;
+};
+
+message ServerHealth {
+  bool isRunning = 1;
+  bool isReady = 2;
+};
+
+// Persistent server info
+message PersistentServer {
+  // Sub-types
+  message SourceStorage {
+    enum SourceType {
+      GIT = 0;
+    };
+
+    SourceType type = 1;
+    string url = 2;
+  };
+
+  message Member {
+    enum MemberRole {
+      DEVELOPER = 0;
+      OWNER = 1;
+    };
+
+    User user = 1;
+    MemberRole role = 2;
+  };
+  
+  // Fields
+  string id = 1;
+  SourceStorage storage = 2;
+  repeated Member members = 3;
+};
