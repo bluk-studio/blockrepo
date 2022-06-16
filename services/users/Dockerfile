@@ -5,7 +5,7 @@ WORKDIR /src
 
 COPY . .
 
-RUN ls
+RUN cd services/users
 RUN npm ci
 RUN npm run build
 RUN ls
