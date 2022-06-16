@@ -1,7 +1,8 @@
 services:
   # 
   api-gateway:
-    build: services/api-gateway
+    build:
+      context: ./services/api-gateway
     depends_on:
       - users
     ports:
@@ -12,7 +13,8 @@ services:
 
   # 
   users:
-    build: services/users
+    build:
+      context: ./services/users
     volumes:
     - ./services/users:/src
     ports:
