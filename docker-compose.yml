@@ -27,7 +27,7 @@ services:
   library:
     build:
       context: .
-      dockerfile: ./services/users/Development.dockerfile
+      dockerfile: ./services/library/Development.dockerfile
     volumes:
     - ./:/src
     command: npm run start:dev
